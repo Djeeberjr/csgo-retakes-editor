@@ -2,6 +2,7 @@ import React from "react"
 import Deck from "../types/Deck"
 import Side from "../types/Side"
 import CardGroupComp from "./CardGroup"
+import NumEdit from "./NumEdit"
 
 interface Props {
     deck: Deck
@@ -14,7 +15,11 @@ const DeckComp: React.FC<Props> = ({deck,side,title,onChange}) => {
     return (
         <div className="bg-green-400 m-1 p-1">
             <span className="font-bold">{title}</span> 
-            { side === Side.CT && <span> D: {deck.numDefusers} </span> }
+            { side === Side.CT && <span> 
+                D: <NumEdit 
+                    value={deck.numDefusers}
+                    onChange={newNum => onChange?.(new Deck(Math.max(newNum,0),...deck.cardGroups))} 
+                /> </span> }
             <div className="flex">
                 {deck.cardGroups.map((group,index) =>
                     <CardGroupComp key={index} cardGroup={group} side={side} 
