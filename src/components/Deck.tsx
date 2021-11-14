@@ -29,6 +29,12 @@ const DeckComp: React.FC<Props> = ({deck,side,title,onChange}) => {
                                 ...deck.cardGroups.map((e,i)=>i===index?newGroup:e)
                             ))
                         }}
+                        onRemove={()=>{
+                            onChange?.(new Deck(
+                                deck.numDefusers,
+                                ...deck.cardGroups.filter((e,i)=>i!==index)
+                            ))
+                        }}
                     />
                 )}
             </div>

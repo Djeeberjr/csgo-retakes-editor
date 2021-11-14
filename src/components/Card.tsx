@@ -10,11 +10,13 @@ interface Props {
     card: Card
     side: Side
     onChange?: (newCard: Card)=>void
+    onRemove?: ()=>void
 }
 
-const CardComp: React.FC<Props> = ({card,side,onChange}) => {
+const CardComp: React.FC<Props> = ({card,side,onChange,onRemove}) => {
     return (
         <div className="bg-blue-500 m-1 p-1">
+            <span className="float-right cursor-pointer" onClick={()=>{onRemove?.()}}>X</span>
             <span className="font-bold"><TextEdit 
                 text={card.title}
                 onChange={(newTitle)=>onChange?.(new Card(newTitle,card.armor,card.helmet,...card.items))}
