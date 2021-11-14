@@ -1,0 +1,30 @@
+enum Item {
+    DEFAULT_PISTOL = "secondary0",
+    DUAL_BERETTAS = "secondary1",
+    P250 = "secondary2",
+    TEC_9_FIVE_SEVEN = "secondary3",
+    DESERT_EAGLE = "secondary4",
+    NOVA = "heavy0",
+    XM1014 = "heavy1",
+    MAG_7 = "heavy2",
+    M249 = "heavy3",
+    NEGEV = "heavy4",
+    MAC_10_MP9 = "smg0",
+    MP7 = "smg1",
+    UMP_45 = "smg2",
+    P90 = "smg3",
+    PP_BIZON = "smg4",
+    FAMAS_GALIL = "rifle0",
+    AK_47_M4 = "rifle1",
+    SSG_08 = "rifle2",
+    SG_554_AUG = "rifle3",
+    AWP = "rifle4",
+    G3_SCAR = "rifle5",
+    MOLOTOV = "grenade0",
+    DECOY = "grenade1",
+    FLASHBANG = "grenade2",
+    HE = "grenade3",
+    SMOKE = "grenade4"
+}
+
+export default Item
