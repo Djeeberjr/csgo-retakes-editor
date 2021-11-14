@@ -3,6 +3,7 @@ import ItemToDisplay from "../ItemToDisplay"
 import Card from "../types/Card"
 import Item from "../types/Item"
 import Side from "../types/Side"
+import AddItem from "./AddItem"
 import SwitchButton from "./SwitchButton"
 import TextEdit from "./TextEdit"
 
@@ -31,12 +32,7 @@ const CardComp: React.FC<Props> = ({card,side,onChange}) => {
                         }} className="float-right cursor-pointer" >X</span>
                     </div>
                 )}
-
-                <div className="text-center cursor-pointer" onClick={()=>{
-                    onChange?.(new Card(card.title,card.armor,card.helmet,...card.items,Item.HE))
-                }} >
-                        Add
-                </div>
+                <AddItem side={side} onChange={newItem => onChange?.(new Card(card.title,card.armor,card.helmet,...card.items,newItem))} />
             </div>
         </div>
     )
