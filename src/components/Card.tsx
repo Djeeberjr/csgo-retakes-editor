@@ -27,7 +27,9 @@ const CardComp: React.FC<Props> = ({card,side,onChange,onRemove}) => {
             </div>
             <div className="border border-red-500">
                 {card.items.map((item,i)=>
-                    <div key={i}>
+                    <div 
+                        key={item + i} // FIXME: this is just a "temporary" solution. Implement propper key
+                    >
                         {ItemToDisplay(item,side)} <span onClick={()=>{
                             onChange?.(new Card(card.title,card.armor,card.helmet,...card.items.filter((_,fi)=>i!==fi)))
                         }} className="float-right cursor-pointer" >X</span>

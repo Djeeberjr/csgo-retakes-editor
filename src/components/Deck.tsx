@@ -24,7 +24,10 @@ const DeckComp: React.FC<Props> = ({deck,side,title,onChange}) => {
                 /> </span> }
             <div className="flex">
                 {deck.cardGroups.map((group,index) =>
-                    <CardGroupComp key={index} cardGroup={group} side={side} 
+                    <CardGroupComp 
+                        key={group.toString() + index} // FIXME: this is just a "temporary" solution. Implement propper key
+                        cardGroup={group}
+                        side={side} 
                         onChange={(newGroup)=>{
                             onChange?.(new Deck(
                                 deck.numDefusers,
