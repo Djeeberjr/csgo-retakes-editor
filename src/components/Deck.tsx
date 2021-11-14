@@ -1,4 +1,6 @@
 import React from "react"
+import Card from "../types/Card"
+import CardGroup from "../types/CardGroup"
 import Deck from "../types/Deck"
 import Side from "../types/Side"
 import CardGroupComp from "./CardGroup"
@@ -37,6 +39,19 @@ const DeckComp: React.FC<Props> = ({deck,side,title,onChange}) => {
                         }}
                     />
                 )}
+                <div className="bg-red-500 m-1 p-1 cursor-pointer" 
+                    onClick={()=>onChange?.(
+                        new Deck(
+                            deck.numDefusers,
+                            ...deck.cardGroups,
+                            new CardGroup(1,new Card("New card",false,false))
+                        )
+                    )}
+                >
+                    <div>
+                        Add Group
+                    </div>
+                </div>
             </div>
         </div>
     )
