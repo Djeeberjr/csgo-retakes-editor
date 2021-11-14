@@ -1,7 +1,6 @@
 import React from "react"
 import ItemToDisplay from "../ItemToDisplay"
 import Card from "../types/Card"
-import Item from "../types/Item"
 import Side from "../types/Side"
 import AddItem from "./AddItem"
 import SwitchButton from "./SwitchButton"

@@ -12,9 +12,7 @@ const AddItem: React.FC<Props> = ({side,onChange}) => {
     const [selected,setSelected] = useState<Item>(Item.DEFAULT_PISTOL)
 
     return (
-        <div
-            className=""
-        >
+        <div>
             <select
                 onChange={(e)=>setSelected(Item[e.target.value as keyof typeof Item])}
             >
