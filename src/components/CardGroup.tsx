@@ -1,4 +1,5 @@
 import React from "react"
+import Card from "../types/Card"
 import CardGroup from "../types/CardGroup"
 import Side from "../types/Side"
 import CardComp from "./Card"
@@ -33,6 +34,18 @@ const CardGroupComp: React.FC<Props> = ({cardGroup,side,onChange,onRemove}) => {
 						)}
 					/>
 				)}
+				<div
+					className="bg-blue-500 m-1 p-1 cursor-pointer"
+					onClick={()=>onChange?.(
+						new CardGroup(
+							cardGroup.numInDeck,
+							...cardGroup.cards,
+							new Card("New card",false,false)
+						)
+					)}
+				>
+					Add card
+				</div>
 			</div>
 		</div>
 	)
