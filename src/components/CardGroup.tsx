@@ -21,7 +21,7 @@ const CardGroupComp: React.FC<Props> = ({cardGroup,side,onChange,onRemove}) => {
 			/>
 			<div className="flex">
 				{cardGroup.cards.map((card,index) => 
-					<CardComp card={card} side={side}
+					<CardComp key={index} card={card} side={side}
 						onChange={(newCard)=>{
 							onChange?.(new CardGroup(
 								cardGroup.numInDeck,
