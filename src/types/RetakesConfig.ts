@@ -2,26 +2,27 @@ import Card from "./Card"
 import Deck from "./Deck"
 
 class RetakesConfig {
-    readonly ctPistol: Deck
-    readonly tPistol: Deck
+    readonly ctPistol: Deck = new Deck(0)
+    readonly tPistol: Deck = new Deck(0)
 
-    readonly ctUpgradedPistol: Deck
-    readonly tUpgradedPistol: Deck
+    readonly ctUpgradedPistol: Deck = new Deck(0)
+    readonly tUpgradedPistol: Deck = new Deck(0)
     
-    readonly ctLight: Deck
-    readonly tLight: Deck
+    readonly ctLight: Deck = new Deck(0)
+    readonly tLight: Deck = new Deck(0)
 
-    readonly ctFull: Deck
-    readonly tFull: Deck
+    readonly ctFull: Deck = new Deck(0)
+    readonly tFull: Deck = new Deck(0)
 
-    readonly ctEnemy: Card
-    readonly tEnemy: Card
+    readonly ctEnemy: Card = new Card("CT Enemy card",false,false)
+    readonly tEnemy: Card = new Card("T Enemy card",false,false)
 
-    readonly ctBonus: Card
-    readonly tBonus: Card
+    readonly ctBonus: Card = new Card("CT Bonus card",false,false)
+    readonly tBonus: Card = new Card("T Bonus card",false,false)
 
-    readonly ctBonusAvailability: number[]
-    readonly tBonusAvailability: number[]
+    // If not set to [1] or a valid value the game will crash
+    readonly ctBonusAvailability: number[] = [1]
+    readonly tBonusAvailability: number[] = [1]
 
     // TODO: there must be some smarter way to do this
     constructor(args? :{
@@ -40,30 +41,26 @@ class RetakesConfig {
         ctBonusAvailability?: number[],
         tBonusAvailability?: number[],
     }){
-        this.ctPistol = args?.ctPistol ?? new Deck(0)
-        this.tPistol = args?.tPistol ?? new Deck(0)
-
-        this.ctUpgradedPistol = args?.ctUpgradedPistol ?? new Deck(0)
-        this.tUpgradedPistol = args?.tUpgradedPistol ?? new Deck(0)
-
-        this.ctLight = args?.ctLight ?? new Deck(0)
-        this.tLight = args?.tLight ?? new Deck(0)
-
-        this.ctFull = args?.ctFull ?? new Deck(0)
-        this.tFull = args?.tFull ?? new Deck(0)
-
-        this.ctEnemy = args?.ctEnemy ?? new Card("CT Enemy card",false,false)
-        this.tEnemy = args?.tEnemy ?? new Card("T Enemy Card",false,false)
-
-        this.ctBonus = args?.ctBonus ?? new Card("CT Bonus card",false,false)
-        this.tBonus = args?.tBonus ?? new Card("T Bonus card",false,false)
-
-        this.ctBonusAvailability = args?.ctBonusAvailability ?? [1] // Has to be 1 or the game will crash
-        this.tBonusAvailability = args?.tBonusAvailability ?? [1]
+        if (args){
+            args.ctPistol && (this.ctPistol = args.ctPistol)
+            args.tPistol && (this.tPistol = args.tPistol)
+            args.ctUpgradedPistol && (this.ctUpgradedPistol = args.ctUpgradedPistol)
+            args.tUpgradedPistol && (this.tUpgradedPistol = args.tUpgradedPistol)
+            args.ctLight && (this.ctLight = args.ctLight)
+            args.tLight && (this.tLight = args.tLight)
+            args.ctFull && (this.ctFull = args.ctFull)
+            args.tFull && (this.tFull = args.tFull)
+            args.ctEnemy && (this.ctEnemy = args.ctEnemy)
+            args.tEnemy && (this.tEnemy = args.tEnemy)
+            args.ctBonus && (this.ctBonus = args.ctBonus)
+            args.tBonus && (this.tBonus = args.tBonus)
+            args.ctBonusAvailability && (this.ctBonusAvailability = args.ctBonusAvailability)
+            args.tBonusAvailability && (this.tBonusAvailability = args.tBonusAvailability)
+        }
     }
 
     public toCvar(){
-        
+
     }
 
 }
