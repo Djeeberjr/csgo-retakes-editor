@@ -9,8 +9,8 @@ class Deck {
         this.cardGroups = cardGroups
     }
 
-    public toString(): string {
-        return `${this.numDefusers}|${this.cardGroups.map(e => e.toString()).join("|")}`
+    public toCvar(): string {
+        return `${this.numDefusers}|${this.cardGroups.map(e => e.toCvar()).join("|")}`
     }
 }
 

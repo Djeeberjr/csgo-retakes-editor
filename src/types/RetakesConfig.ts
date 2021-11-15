@@ -59,8 +59,20 @@ class RetakesConfig {
         }
     }
 
-    public toCvar(){
-
+    public toCvar(): string{
+        return `mp_retake_ct_loadout_default_pistol_round "${this.ctPistol.toCvar()}"
+mp_retake_t_loadout_default_pistol_round "${this.tPistol.toCvar()}"
+mp_retake_ct_loadout_upgraded_pistol_round "${this.ctUpgradedPistol.toCvar()}"
+mp_retake_t_loadout_upgraded_pistol_round "${this.tUpgradedPistol.toCvar()}"
+mp_retake_ct_loadout_light_buy_round "${this.ctLight.toCvar()}"
+mp_retake_t_loadout_light_buy_round "${this.tLight.toCvar()}"
+mp_retake_ct_loadout_full_buy_round "${this.ctFull.toCvar()}"
+mp_retake_t_loadout_full_buy_round "${this.tFull.toCvar()}"
+mp_retake_ct_loadout_bonus_card "${this.ctBonus.toCvar()}"
+mp_retake_t_loadout_bonus_card "${this.tBonus.toCvar()}"
+mp_retake_ct_loadout_bonus_card_availability "${this.ctBonusAvailability.join(",")}"
+mp_retake_t_loadout_bonus_card_availability "${this.tBonusAvailability.join(",")}"
+`
     }
 
 }

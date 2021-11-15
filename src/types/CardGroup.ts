@@ -9,8 +9,8 @@ class CardGroup {
         this.cards = cards
     }
 
-    public toString(): string {
-        return `${this.numInDeck};${this.cards.map(e => e.toString()).join(";")}`
+    public toCvar(): string {
+        return `${this.numInDeck};${this.cards.map(e => e.toCvar()).join(";")}`
     }
 }
 

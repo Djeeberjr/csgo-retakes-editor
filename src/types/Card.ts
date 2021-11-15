@@ -13,7 +13,7 @@ class Card {
         this.items = items
     }
 
-    public toString(): string {
+    public toCvar(): string {
         return `${this.title},${bToS(this.armor)},${bToS(this.helmet)},${this.items.join(",")}`
     }
 }
