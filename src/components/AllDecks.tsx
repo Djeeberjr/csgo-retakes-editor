@@ -37,9 +37,9 @@ const AllDecks: React.FC = () => {
             </div>
 
             <div className="flex">
-                <CardComp card={retakesConfig.ctBonus} side={Side.T} 
+                <CardComp card={retakesConfig.ctBonus} side={Side.CT} 
                     onChange={(newCard)=>setRetakesConfig(new RetakesConfig({...retakesConfig,...{ctBonus:newCard}}))} />
-                <CardComp card={retakesConfig.tBonus} side={Side.CT} 
+                <CardComp card={retakesConfig.tBonus} side={Side.T} 
                     onChange={(newCard)=>setRetakesConfig(new RetakesConfig({...retakesConfig,...{tBonus:newCard}}))} />
             </div>
         </div>
