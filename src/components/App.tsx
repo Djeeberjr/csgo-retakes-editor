@@ -1,5 +1,6 @@
 import React from 'react';
 import AllDecks from './AllDecks';
+import MenuBar from './MenuBar';
 
 function App() {
   // const [CTDeck,setCTDeck] = useState<Deck>(new Deck(
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <div className="text-white">
+      <MenuBar />
       <AllDecks />
     </div>
   );

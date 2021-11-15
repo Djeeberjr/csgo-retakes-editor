@@ -5,3 +5,7 @@
 .min-h-card {
     min-height: 10rem;
 }
+
+.button {
+    @apply py-1 px-2 mx-2 hover:bg-gray-900 cursor-pointer
+}

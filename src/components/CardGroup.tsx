@@ -38,7 +38,7 @@ const CardGroupComp: React.FC<Props> = ({cardGroup,side,onChange,onRemove}) => {
 					/>
 				)}
 				<div
-					className="bg-gray-600 m-1 p-1 cursor-pointer my-auto"
+					className="bg-gray-600 my-auto button"
 					onClick={()=>onChange?.(
 						new CardGroup(
 							cardGroup.numInDeck,

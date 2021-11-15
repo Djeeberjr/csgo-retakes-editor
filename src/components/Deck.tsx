@@ -42,7 +42,7 @@ const DeckComp: React.FC<Props> = ({deck,side,title,onChange}) => {
                         }}
                     />
                 )}
-                <div className="bg-gray-700 m-1 p-1 cursor-pointer my-auto" 
+                <div className="bg-gray-700 button my-auto" 
                     onClick={()=>onChange?.(
                         new Deck(
                             deck.numDefusers,
