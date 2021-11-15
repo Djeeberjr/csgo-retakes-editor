@@ -15,7 +15,7 @@ interface Props {
 
 const DeckComp: React.FC<Props> = ({deck,side,title,onChange}) => {
     return (
-        <div className="bg-gray-800 m-1 p-1">
+        <div className="bg-gray-800 m-1 p-1 overflow-x-scroll">
             <span className="font-bold">{title}</span> 
             { side === Side.CT && <span> 
                 D: <NumEdit 
