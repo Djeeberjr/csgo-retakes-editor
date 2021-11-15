@@ -3,8 +3,9 @@ import RetakesConfig from "../types/RetakesConfig"
 import AllDecks from "./AllDecks"
 import MenuBar from "./MenuBar"
 
-function App() {
 
+
+const App: React.FC = () => {
 	const [retakesConfig,setRetakesConfig] = useState(new RetakesConfig())
 
 	return (
