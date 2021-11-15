@@ -15,7 +15,7 @@ interface Props {
 
 const CardComp: React.FC<Props> = ({card,side,onChange,onRemove}) => {
     return (
-        <div className="bg-gray-600 m-1 p-1 w-72 min-h-12">
+        <div className="bg-gray-600 m-1 p-1 w-72 min-h-card">
             <span className="float-right cursor-pointer" onClick={()=>{onRemove?.()}}>X</span>
             <span className="font-bold"><TextEdit 
                 text={card.title}
