@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import RetakesConfig from "../types/RetakesConfig"
 import Side from "../types/Side"
+import CardComp from "./Card"
 import DeckComp from "./Deck"
 
 const AllDecks: React.FC = () => {
@@ -28,6 +29,19 @@ const AllDecks: React.FC = () => {
             <DeckComp title="T Full" side={Side.T} deck={retakesConfig.tFull} 
                 onChange={(newDeck)=> setRetakesConfig(new RetakesConfig({...retakesConfig,...{tFull:newDeck}}))} />
 
+            <div className="flex">
+                <CardComp card={retakesConfig.ctEnemy} side={Side.T} 
+                    onChange={(newCard)=>setRetakesConfig(new RetakesConfig({...retakesConfig,...{ctEnemy:newCard}}))} />
+                <CardComp card={retakesConfig.tEnemy} side={Side.CT} 
+                    onChange={(newCard)=>setRetakesConfig(new RetakesConfig({...retakesConfig,...{tEnemy:newCard}}))} />
+            </div>
+
+            <div className="flex">
+                <CardComp card={retakesConfig.ctBonus} side={Side.T} 
+                    onChange={(newCard)=>setRetakesConfig(new RetakesConfig({...retakesConfig,...{ctBonus:newCard}}))} />
+                <CardComp card={retakesConfig.tBonus} side={Side.CT} 
+                    onChange={(newCard)=>setRetakesConfig(new RetakesConfig({...retakesConfig,...{tBonus:newCard}}))} />
+            </div>
         </div>
     )
 }
