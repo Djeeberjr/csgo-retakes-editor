@@ -6,9 +6,9 @@ interface Props {
 }
 
 const SwitchButton: React.FC<Props> = ({active,onChange}) => {
-    return (
-        <button onClick={()=>onChange(!active)} > {active?"YES":"NO"} </button>
-    )
+	return (
+		<button onClick={()=>onChange(!active)} > {active?"YES":"NO"} </button>
+	)
 }
 
 export default SwitchButton

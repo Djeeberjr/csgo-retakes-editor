@@ -6,19 +6,19 @@ interface Props {
 }
 
 const NumEdit: React.FC<Props> = ({value,onChange}) => {
-    return (
-        <>
-            <span 
-                className="cursor-pointer select-none"
-                onClick={()=>onChange?.(value - 1)}
-            >-</span>
-            {value}
-            <span 
-                className="cursor-pointer select-none"
-                onClick={()=>onChange?.(value + 1)}
-            >+</span>
-        </>
-    )
+	return (
+		<>
+			<span 
+				className="cursor-pointer select-none"
+				onClick={()=>onChange?.(value - 1)}
+			>-</span>
+			{value}
+			<span 
+				className="cursor-pointer select-none"
+				onClick={()=>onChange?.(value + 1)}
+			>+</span>
+		</>
+	)
 }
 
 export default NumEdit
