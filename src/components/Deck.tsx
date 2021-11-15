@@ -17,8 +17,8 @@ const DeckComp: React.FC<Props> = ({deck,side,title,onChange}) => {
     return (
         <div className="bg-gray-800 m-1 p-1 overflow-x-scroll">
             <span className="font-bold">{title}</span> 
-            { side === Side.CT && <span> 
-                D: <NumEdit 
+            { side === Side.CT && <span className="px-2"> 
+                Defuser: <NumEdit 
                     value={deck.numDefusers}
                     onChange={newNum => onChange?.(new Deck(Math.max(newNum,0),...deck.cardGroups))} 
                 /> </span> }
