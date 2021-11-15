@@ -9,10 +9,16 @@ function App() {
 
   return (
     <div className="text-white">
-      <MenuBar onExport={()=>{
-        const exportString = retakesConfig.toCvar()
-        console.log(exportString)
-      }} />
+      <MenuBar 
+        onExport={()=>{
+          const exportString = retakesConfig.toCvar()
+          console.log(exportString)
+        }}
+        onExportJson={()=>{
+          const jsonString = JSON.stringify(retakesConfig)
+          console.log(jsonString)
+        }} 
+      />
       <AllDecks retakesConfig={retakesConfig} onChange={(newConfig)=>setRetakesConfig(newConfig)} />
     </div>
   );
