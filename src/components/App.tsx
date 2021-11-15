@@ -18,7 +18,7 @@ function App() {
   ))
 
   return (
-    <div>
+    <div className="text-white">
       <DeckComp title="CT Normal" side={Side.CT} deck={CTDeck} onChange={(newDeck)=> setCTDeck(newDeck)} />
     </div>
   );

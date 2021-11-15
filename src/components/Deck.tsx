@@ -15,7 +15,7 @@ interface Props {
 
 const DeckComp: React.FC<Props> = ({deck,side,title,onChange}) => {
     return (
-        <div className="bg-green-400 m-1 p-1">
+        <div className="bg-gray-800 m-1 p-1">
             <span className="font-bold">{title}</span> 
             { side === Side.CT && <span> 
                 D: <NumEdit 
@@ -42,7 +42,7 @@ const DeckComp: React.FC<Props> = ({deck,side,title,onChange}) => {
                         }}
                     />
                 )}
-                <div className="bg-red-500 m-1 p-1 cursor-pointer" 
+                <div className="bg-gray-700 m-1 p-1 cursor-pointer my-auto" 
                     onClick={()=>onChange?.(
                         new Deck(
                             deck.numDefusers,

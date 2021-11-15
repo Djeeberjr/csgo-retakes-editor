@@ -14,6 +14,7 @@ const AddItem: React.FC<Props> = ({side,onChange}) => {
     return (
         <div>
             <select
+                className="bg-gray-600 border-2 border-gray-700"
                 onChange={(e)=>setSelected(Item[e.target.value as keyof typeof Item])}
             >
                 {
@@ -22,7 +23,7 @@ const AddItem: React.FC<Props> = ({side,onChange}) => {
             </select>
             <span
                 onClick={()=>onChange?.(selected)}
-                className="cursor-pointer"
+                className="cursor-pointer float-right"
             >
                 Add
             </span>

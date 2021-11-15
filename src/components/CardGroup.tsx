@@ -14,7 +14,7 @@ interface Props {
 
 const CardGroupComp: React.FC<Props> = ({cardGroup,side,onChange,onRemove}) => {
 	return (
-		<div className="bg-red-500 m-1 p-1">
+		<div className="bg-gray-700 m-1 p-1">
 			<span className="float-right cursor-pointer" onClick={()=>onRemove?.()} >X</span>
 			Num: <NumEdit value={cardGroup.numInDeck} 
 				onChange={newNum => onChange?.(new CardGroup(Math.max(newNum,0),...cardGroup.cards))}
@@ -38,7 +38,7 @@ const CardGroupComp: React.FC<Props> = ({cardGroup,side,onChange,onRemove}) => {
 					/>
 				)}
 				<div
-					className="bg-blue-500 m-1 p-1 cursor-pointer"
+					className="bg-gray-600 m-1 p-1 cursor-pointer my-auto"
 					onClick={()=>onChange?.(
 						new CardGroup(
 							cardGroup.numInDeck,
