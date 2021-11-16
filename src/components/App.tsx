@@ -1,10 +1,9 @@
 import React, { useState } from "react"
+import copy from "copy-to-clipboard"
 import RetakesConfig from "../types/RetakesConfig"
 import AllDecks from "./AllDecks"
 import MenuBar from "./MenuBar"
 import Modal from "./Modal"
-
-
 
 const App: React.FC = () => {
 	const [retakesConfig,setRetakesConfig] = useState(new RetakesConfig())
@@ -31,10 +30,13 @@ const App: React.FC = () => {
 						cols={50} rows={10}
 						value={exportText}
 						readOnly
-						className="text-black bg-transparent border-2 border-gray-900"
+						className="bg-transparent border-2 border-gray-900"
 					/>
 				</div>
-				<div className="bg-gray-700 button flex justify-center" >Copy to clipboard</div>
+				<div 
+					className="bg-gray-700 button flex justify-center"
+					onClick={()=>copy(exportText)}
+				>Copy to clipboard</div>
 			</Modal>
 		</div>
 	)
