@@ -2,6 +2,7 @@
   "name": "csgo-retakes",
   "version": "0.1.0",
   "private": true,
+  "homepage":"djeeberjr.github.io/csgo-retakes-editor",
   "dependencies": {
     "@craco/craco": "^6.4.0",
     "@types/jest": "^26.0.15",
@@ -21,7 +22,9 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+	"predeploy":"yarn run build",
+	"deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +47,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
-    "eslint-plugin-react": "^7.27.0"
+    "eslint-plugin-react": "^7.27.0",
+    "gh-pages": "^3.2.3"
   }
 }
