@@ -2,7 +2,7 @@
   "name": "csgo-retakes",
   "version": "0.1.0",
   "private": true,
-  "homepage":"djeeberjr.github.io/csgo-retakes-editor",
+  "homepage":"https://djeeberjr.github.io/csgo-retakes-editor",
   "dependencies": {
     "@craco/craco": "^6.4.0",
     "@types/jest": "^26.0.15",
