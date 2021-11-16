@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import copy from "copy-to-clipboard"
 import RetakesConfig from "../types/RetakesConfig"
 import AllDecks from "./AllDecks"
@@ -10,6 +10,19 @@ const App: React.FC = () => {
 	const [showExport,setShowExport] = useState(false)
 	const [exportText,setExportText] = useState("")
 
+	useEffect(()=>{
+		// Load saved config
+		const retakesJSON = window.localStorage.getItem("retakesJSON")
+		if (retakesJSON){
+			try{
+				const parsedConfig: RetakesConfig = JSON.parse(retakesJSON)
+				setRetakesConfig(parsedConfig)
+			}catch(err){
+				window.localStorage.removeItem("retakesJSON")
+			}
+		}
+	},[])
+
 	return (
 		<div className="text-white">
 			<MenuBar 
@@ -20,6 +33,11 @@ const App: React.FC = () => {
 				onExportJson={()=>{
 					setExportText(JSON.stringify(retakesConfig))
 					setShowExport(true)
+				}}
+				onSave={()=>{
+					const jsonString = JSON.stringify(retakesConfig)
+					window.localStorage.setItem("retakesJSON",jsonString)
+					// TODO: user feedback that config was saved
 				}}
 			/>
 			<AllDecks retakesConfig={retakesConfig} onChange={(newConfig)=>setRetakesConfig(newConfig)} />
