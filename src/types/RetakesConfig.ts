@@ -60,6 +60,7 @@ class RetakesConfig {
 	}
 
 	public toCvar(): string{
+		console.debug("THIS:")
 		return `mp_retake_ct_loadout_default_pistol_round "${this.ctPistol.toCvar()}"
 mp_retake_t_loadout_default_pistol_round "${this.tPistol.toCvar()}"
 mp_retake_ct_loadout_upgraded_pistol_round "${this.ctUpgradedPistol.toCvar()}"
@@ -73,6 +74,25 @@ mp_retake_t_loadout_bonus_card "${this.tBonus.toCvar()}"
 mp_retake_ct_loadout_bonus_card_availability "${this.ctBonusAvailability.join(",")}"
 mp_retake_t_loadout_bonus_card_availability "${this.tBonusAvailability.join(",")}"
 `
+	}
+
+	static fromObject(input: Record<string, unknown>): RetakesConfig {
+		return new RetakesConfig({
+			ctPistol: Deck.fromObject(input.ctPistol as Record<string, unknown>),
+			tPistol: Deck.fromObject(input.tPistol as Record<string,unknown>),
+			ctUpgradedPistol: Deck.fromObject(input.ctUpgradedPistol as Record<string,unknown>),
+			tUpgradedPistol: Deck.fromObject(input.tUpgradedPistol as Record<string,unknown>),
+			ctLight: Deck.fromObject(input.ctLight as Record<string,unknown>),
+			tLight: Deck.fromObject(input.tLight as Record<string,unknown>),
+			ctFull: Deck.fromObject(input.ctFull as Record<string,unknown>),
+			tFull: Deck.fromObject(input.tFull as Record<string,unknown>),
+			ctEnemy: Card.fromObject(input.ctEnemy as Record<string,unknown>),
+			tEnemy: Card.fromObject(input.tEnemy as Record<string,unknown>),
+			ctBonus: Card.fromObject(input.ctBonus as Record<string,unknown>),
+			tBonus: Card.fromObject(input.tBonus as Record<string,unknown>),
+			ctBonusAvailability: input.ctBonusAvailability as number[],
+			tBonusAvailability: input.tBonusAvailability as number[],
+		})
 	}
 
 }

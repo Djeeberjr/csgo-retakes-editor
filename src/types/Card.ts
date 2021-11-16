@@ -16,6 +16,15 @@ class Card {
 	public toCvar(): string {
 		return `${this.title},${bToS(this.armor)},${bToS(this.helmet)},${this.items.join(",")}`
 	}
+
+	static fromObject(input: Record<string, unknown>): Card {
+		return new Card(
+			input.title as string,
+			input.armor as boolean,
+			input.helmet as boolean,
+			...input.items as Item[]
+		)
+	}
 }
 
 /**

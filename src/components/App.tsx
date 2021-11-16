@@ -15,8 +15,8 @@ const App: React.FC = () => {
 		const retakesJSON = window.localStorage.getItem("retakesJSON")
 		if (retakesJSON){
 			try{
-				const parsedConfig: RetakesConfig = JSON.parse(retakesJSON)
-				setRetakesConfig(parsedConfig)
+				const parsedConfig: Record<string,unknown> = JSON.parse(retakesJSON)
+				setRetakesConfig(RetakesConfig.fromObject(parsedConfig))
 			}catch(err){
 				window.localStorage.removeItem("retakesJSON")
 			}
