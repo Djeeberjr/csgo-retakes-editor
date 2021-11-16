@@ -3,10 +3,11 @@ import React from "react"
 interface Props {
     onExport?: ()=>void
     onExportJson?: ()=>void
+	onImport?: ()=>void
 	onSave?:()=>void
 }
 
-const MenuBar: React.FC<Props> = ({onExport,onExportJson,onSave}) => {
+const MenuBar: React.FC<Props> = ({onExport,onExportJson,onSave,onImport}) => {
 	return (
 		<div className="bg-gray-800 h-10 m-1 p-1 flex">
 			<div className="bg-gray-700 button" onClick={onExport}>
@@ -14,6 +15,9 @@ const MenuBar: React.FC<Props> = ({onExport,onExportJson,onSave}) => {
 			</div>
 			<div className="bg-gray-700 button" onClick={onExportJson}>
                 Export to JSON
+			</div>
+			<div className="bg-gray-700 button" onClick={onImport}>
+                Import
 			</div>
 			<div className="bg-gray-700 button" onClick={onSave}>
                 Save

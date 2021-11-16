@@ -8,6 +8,8 @@ import Modal from "./Modal"
 const App: React.FC = () => {
 	const [retakesConfig,setRetakesConfig] = useState(new RetakesConfig())
 	const [showExport,setShowExport] = useState(false)
+	const [showImport,setShowImport] = useState(false)
+	const [importText,setImportText] = useState("")
 	const [exportText,setExportText] = useState("")
 
 	useEffect(()=>{
@@ -34,6 +36,9 @@ const App: React.FC = () => {
 					setExportText(JSON.stringify(retakesConfig))
 					setShowExport(true)
 				}}
+				onImport={()=>{
+					setShowImport(true)
+				}}
 				onSave={()=>{
 					const jsonString = JSON.stringify(retakesConfig)
 					window.localStorage.setItem("retakesJSON",jsonString)
@@ -55,6 +60,29 @@ const App: React.FC = () => {
 					className="bg-gray-700 button flex justify-center"
 					onClick={()=>copy(exportText)}
 				>Copy to clipboard</div>
+			</Modal>
+			<Modal show={showImport} onCloseClick={()=>setShowImport(false)}>
+				<div className="flex justify-center mb-2">
+					<textarea
+						cols={50} rows={10}
+						value={importText}
+						onChange={(e)=>setImportText(e.target.value)}
+						className="bg-transparent border-2 border-gray-900"
+					/>
+				</div>
+				<div 
+					className="bg-gray-700 button flex justify-center"
+					onClick={()=>{
+						try{
+							const parsedConfig: Record<string,unknown> = JSON.parse(importText)
+							setRetakesConfig(RetakesConfig.fromObject(parsedConfig))
+							setShowImport(false)
+							setImportText("")
+						}catch(e){
+							console.error(e)
+						}
+					}}
+				>Import</div>
 			</Modal>
 		</div>
 	)
