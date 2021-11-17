@@ -39,10 +39,8 @@ const App: React.FC = () => {
 				onImport={()=>{
 					setShowImport(true)
 				}}
-				onSave={()=>{
-					const jsonString = JSON.stringify(retakesConfig)
-					window.localStorage.setItem("retakesJSON",jsonString)
-					// TODO: user feedback that config was saved
+				onClear={()=>{
+					setRetakesConfig(new RetakesConfig())
 				}}
 			/>
 			<AllDecks retakesConfig={retakesConfig} onChange={(newConfig)=>setRetakesConfig(newConfig)} />
