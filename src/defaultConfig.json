@@ -1,0 +1,498 @@
+{
+    "ctPistol": {
+        "numDefusers": 1,
+        "cardGroups": [
+            {
+                "numInDeck": 3,
+                "cards": [
+                    {
+                        "title": "4v3",
+                        "armor": false,
+                        "helmet": false,
+                        "items": [
+                            "secondary0"
+                        ]
+                    }
+                ]
+            },
+            {
+                "numInDeck": 1,
+                "cards": [
+                    {
+                        "title": "Flash out",
+                        "armor": false,
+                        "helmet": false,
+                        "items": [
+                            "secondary0",
+                            "grenade2"
+                        ]
+                    },
+                    {
+                        "title": "Hide and Peek",
+                        "armor": false,
+                        "helmet": false,
+                        "items": [
+                            "secondary0"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "tPistol": {
+        "numDefusers": 0,
+        "cardGroups": [
+            {
+                "numInDeck": 3,
+                "cards": [
+                    {
+                        "title": "4 bad guys left",
+                        "armor": false,
+                        "helmet": false,
+                        "items": [
+                            "secondary0"
+                        ]
+                    }
+                ]
+            },
+            {
+                "numInDeck": 1,
+                "cards": [
+                    {
+                        "title": "Look Away",
+                        "armor": false,
+                        "helmet": false,
+                        "items": [
+                            "secondary0",
+                            "grenade2"
+                        ]
+                    },
+                    {
+                        "title": "When There Is Smoke",
+                        "armor": false,
+                        "helmet": false,
+                        "items": [
+                            "secondary0",
+                            "grenade4"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "ctUpgradedPistol": {
+        "numDefusers": 2,
+        "cardGroups": [
+            {
+                "numInDeck": 2,
+                "cards": [
+                    {
+                        "title": "Take Five",
+                        "armor": false,
+                        "helmet": false,
+                        "items": [
+                            "secondary3"
+                        ]
+                    }
+                ]
+            },
+            {
+                "numInDeck": 2,
+                "cards": [
+                    {
+                        "title": "Blind Fire",
+                        "armor": false,
+                        "helmet": false,
+                        "items": [
+                            "secondary2",
+                            "grenade2"
+                        ]
+                    }
+                ]
+            },
+            {
+                "numInDeck": 2,
+                "cards": [
+                    {
+                        "title": "Only Takes One",
+                        "armor": false,
+                        "helmet": false,
+                        "items": [
+                            "secondary4"
+                        ]
+                    }
+                ]
+            },
+            {
+                "numInDeck": 2,
+                "cards": [
+                    {
+                        "title": "Sneaky Beaky Like",
+                        "armor": false,
+                        "helmet": false,
+                        "items": [
+                            "secondary2",
+                            "grenade4"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "tUpgradedPistol": {
+        "numDefusers": 0,
+        "cardGroups": [
+            {
+                "numInDeck": 2,
+                "cards": [
+                    {
+                        "title": "Blind Fire",
+                        "armor": false,
+                        "helmet": false,
+                        "items": [
+                            "secondary2",
+                            "grenade2"
+                        ]
+                    }
+                ]
+            },
+            {
+                "numInDeck": 2,
+                "cards": [
+                    {
+                        "title": "Que Ota",
+                        "armor": false,
+                        "helmet": false,
+                        "items": [
+                            "secondary4"
+                        ]
+                    }
+                ]
+            },
+            {
+                "numInDeck": 1,
+                "cards": [
+                    {
+                        "title": "Smoke Screen",
+                        "armor": false,
+                        "helmet": false,
+                        "items": [
+                            "secondary2",
+                            "grenade4"
+                        ]
+                    }
+                ]
+            },
+            {
+                "numInDeck": 1,
+                "cards": [
+                    {
+                        "title": "Tec Tec Boom",
+                        "armor": false,
+                        "helmet": false,
+                        "items": [
+                            "secondary3",
+                            "grenade3"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "ctLight": {
+        "numDefusers": 3,
+        "cardGroups": [
+            {
+                "numInDeck": 2,
+                "cards": [
+                    {
+                        "title": "Ump In Smoke",
+                        "armor": true,
+                        "helmet": true,
+                        "items": [
+                            "smg2",
+                            "grenade4"
+                        ]
+                    }
+                ]
+            },
+            {
+                "numInDeck": 2,
+                "cards": [
+                    {
+                        "title": "Fun N Gun",
+                        "armor": true,
+                        "helmet": true,
+                        "items": [
+                            "smg0",
+                            "grenade3"
+                        ]
+                    }
+                ]
+            },
+            {
+                "numInDeck": 2,
+                "cards": [
+                    {
+                        "title": "Sharpshooter",
+                        "armor": true,
+                        "helmet": true,
+                        "items": [
+                            "rifle2",
+                            "grenade2"
+                        ]
+                    }
+                ]
+            },
+            {
+                "numInDeck": 2,
+                "cards": [
+                    {
+                        "title": "Burst Bullpup",
+                        "armor": true,
+                        "helmet": true,
+                        "items": [
+                            "rifle0"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "tLight": {
+        "numDefusers": 0,
+        "cardGroups": [
+            {
+                "numInDeck": 2,
+                "cards": [
+                    {
+                        "title": "Back In A Flash",
+                        "armor": true,
+                        "helmet": true,
+                        "items": [
+                            "smg2",
+                            "grenade2"
+                        ]
+                    }
+                ]
+            },
+            {
+                "numInDeck": 2,
+                "cards": [
+                    {
+                        "title": "All In",
+                        "armor": true,
+                        "helmet": true,
+                        "items": [
+                            "rifle0"
+                        ]
+                    }
+                ]
+            },
+            {
+                "numInDeck": 1,
+                "cards": [
+                    {
+                        "title": "Boom Box",
+                        "armor": true,
+                        "helmet": true,
+                        "items": [
+                            "smg0",
+                            "grenade4",
+                            "grenade3"
+                        ]
+                    }
+                ]
+            },
+            {
+                "numInDeck": 1,
+                "cards": [
+                    {
+                        "title": "Set Them Free",
+                        "armor": true,
+                        "helmet": true,
+                        "items": [
+                            "rifle2",
+                            "grenade2"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "ctFull": {
+        "numDefusers": 4,
+        "cardGroups": [
+            {
+                "numInDeck": 2,
+                "cards": [
+                    {
+                        "title": "Light Em Up",
+                        "armor": true,
+                        "helmet": true,
+                        "items": [
+                            "rifle1",
+                            "grenade2"
+                        ]
+                    }
+                ]
+            },
+            {
+                "numInDeck": 2,
+                "cards": [
+                    {
+                        "title": "Kobe",
+                        "armor": true,
+                        "helmet": true,
+                        "items": [
+                            "rifle1",
+                            "grenade3"
+                        ]
+                    }
+                ]
+            },
+            {
+                "numInDeck": 1,
+                "cards": [
+                    {
+                        "title": "1g",
+                        "armor": true,
+                        "helmet": true,
+                        "items": [
+                            "rifle1",
+                            "grenade0"
+                        ]
+                    }
+                ]
+            },
+            {
+                "numInDeck": 1,
+                "cards": [
+                    {
+                        "title": "Disappearing Act",
+                        "armor": true,
+                        "helmet": true,
+                        "items": [
+                            "rifle1",
+                            "grenade4"
+                        ]
+                    }
+                ]
+            },
+            {
+                "numInDeck": 1,
+                "cards": [
+                    {
+                        "title": "Eyes On Target",
+                        "armor": true,
+                        "helmet": true,
+                        "items": [
+                            "rifle3"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "tFull": {
+        "numDefusers": 0,
+        "cardGroups": [
+            {
+                "numInDeck": 2,
+                "cards": [
+                    {
+                        "title": "Ol Reliable",
+                        "armor": true,
+                        "helmet": true,
+                        "items": [
+                            "rifle1",
+                            "grenade2"
+                        ]
+                    }
+                ]
+            },
+            {
+                "numInDeck": 1,
+                "cards": [
+                    {
+                        "title": "Smoke Show",
+                        "armor": true,
+                        "helmet": true,
+                        "items": [
+                            "rifle1",
+                            "grenade4"
+                        ]
+                    }
+                ]
+            },
+            {
+                "numInDeck": 1,
+                "cards": [
+                    {
+                        "title": "Hot Shot",
+                        "armor": true,
+                        "helmet": true,
+                        "items": [
+                            "rifle1",
+                            "grenade0"
+                        ]
+                    }
+                ]
+            },
+            {
+                "numInDeck": 1,
+                "cards": [
+                    {
+                        "title": "Eye Spy",
+                        "armor": true,
+                        "helmet": true,
+                        "items": [
+                            "rifle3",
+                            "grenade3"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "ctEnemy": {
+        "title": "Behind Enemy Lines",
+        "armor": true,
+        "helmet": true,
+        "items": [
+            "rifle1",
+            "grenade2"
+        ]
+    },
+    "tEnemy": {
+        "title": "Finders Keepers",
+        "armor": true,
+        "helmet": true,
+        "items": [
+            "rifle1",
+            "grenade2"
+        ]
+    },
+    "ctBonus": {
+        "title": "The AWPortunity",
+        "armor": true,
+        "helmet": true,
+        "items": [
+            "rifle4"
+        ]
+    },
+    "tBonus": {
+        "title": "The AWPortunity",
+        "armor": true,
+        "helmet": true,
+        "items": [
+            "rifle4"
+        ]
+    },
+    "ctBonusAvailability": [
+        1
+    ],
+    "tBonusAvailability": [
+        1
+    ]
+}

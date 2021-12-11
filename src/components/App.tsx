@@ -4,6 +4,7 @@ import RetakesConfig from "../types/RetakesConfig"
 import AllDecks from "./AllDecks"
 import MenuBar from "./MenuBar"
 import Modal from "./Modal"
+import defaultConfig from "./../defaultConfig.json"
 
 const App: React.FC = () => {
 	const [retakesConfig,setRetakesConfig] = useState(new RetakesConfig())
@@ -21,9 +22,27 @@ const App: React.FC = () => {
 				setRetakesConfig(RetakesConfig.fromObject(parsedConfig))
 			}catch(err){
 				window.localStorage.removeItem("retakesJSON")
+				setRetakesConfig(RetakesConfig.fromObject(defaultConfig))
 			}
+		}else{
+			setRetakesConfig(RetakesConfig.fromObject(defaultConfig))
 		}
 	},[])
+
+
+	useEffect(()=>{
+		const handler = ()=>{
+			const jsonString = JSON.stringify(retakesConfig)
+			console.debug(jsonString)
+			window.localStorage.setItem("retakesJSON",jsonString)
+		}
+
+		window.addEventListener("beforeunload",handler)
+
+		return ()=>{
+			window.removeEventListener("beforeunload",handler)
+		}
+	},[retakesConfig])
 
 	return (
 		<div className="text-white">
