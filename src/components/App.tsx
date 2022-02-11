@@ -61,6 +61,9 @@ const App: React.FC = () => {
 				onClear={()=>{
 					setRetakesConfig(new RetakesConfig())
 				}}
+				onReset={()=>{
+					setRetakesConfig(RetakesConfig.fromObject(defaultConfig))
+				}}
 			/>
 			<AllDecks retakesConfig={retakesConfig} onChange={(newConfig)=>setRetakesConfig(newConfig)} />
 
