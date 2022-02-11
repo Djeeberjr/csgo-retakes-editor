@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/csgo-retakes-editor/static/css/main.2fd7a48b.chunk.css",
-    "main.js": "/csgo-retakes-editor/static/js/main.2f4e838e.chunk.js",
-    "main.js.map": "/csgo-retakes-editor/static/js/main.2f4e838e.chunk.js.map",
+    "main.js": "/csgo-retakes-editor/static/js/main.c2adb74f.chunk.js",
+    "main.js.map": "/csgo-retakes-editor/static/js/main.c2adb74f.chunk.js.map",
     "runtime-main.js": "/csgo-retakes-editor/static/js/runtime-main.e69313bd.js",
     "runtime-main.js.map": "/csgo-retakes-editor/static/js/runtime-main.e69313bd.js.map",
-    "static/js/2.1e368b07.chunk.js": "/csgo-retakes-editor/static/js/2.1e368b07.chunk.js",
-    "static/js/2.1e368b07.chunk.js.map": "/csgo-retakes-editor/static/js/2.1e368b07.chunk.js.map",
+    "static/js/2.b8a9c23e.chunk.js": "/csgo-retakes-editor/static/js/2.b8a9c23e.chunk.js",
+    "static/js/2.b8a9c23e.chunk.js.map": "/csgo-retakes-editor/static/js/2.b8a9c23e.chunk.js.map",
     "index.html": "/csgo-retakes-editor/index.html",
     "static/css/main.2fd7a48b.chunk.css.map": "/csgo-retakes-editor/static/css/main.2fd7a48b.chunk.css.map",
-    "static/js/2.1e368b07.chunk.js.LICENSE.txt": "/csgo-retakes-editor/static/js/2.1e368b07.chunk.js.LICENSE.txt"
+    "static/js/2.b8a9c23e.chunk.js.LICENSE.txt": "/csgo-retakes-editor/static/js/2.b8a9c23e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e69313bd.js",
-    "static/js/2.1e368b07.chunk.js",
+    "static/js/2.b8a9c23e.chunk.js",
     "static/css/main.2fd7a48b.chunk.css",
-    "static/js/main.2f4e838e.chunk.js"
+    "static/js/main.c2adb74f.chunk.js"
   ]
 }
