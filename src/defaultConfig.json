@@ -32,7 +32,8 @@
                         "armor": false,
                         "helmet": false,
                         "items": [
-                            "secondary0"
+                            "secondary0",
+                            "grenade4"
                         ]
                     }
                 ]
@@ -490,9 +491,12 @@
         ]
     },
     "ctBonusAvailability": [
-        1
+        1,
+        2
     ],
     "tBonusAvailability": [
-        1
+        1,
+        1,
+        2
     ]
 }
