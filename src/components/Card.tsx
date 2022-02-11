@@ -32,7 +32,7 @@ const CardComp: React.FC<Props> = ({card,side,onChange,onRemove}) => {
 			<div className="border-2 border-gray-700 p-0.5">
 				{card.items.map((item,i)=>
 					<div 
-						key={item + i} // FIXME: this is just a "temporary" solution. Implement propper key
+						key={item}
 					>
 						{ItemToDisplay(item,side)} <span onClick={()=>{
 							onChange?.(new Card(card.title,card.armor,card.helmet,...card.items.filter((_,fi)=>i!==fi)))

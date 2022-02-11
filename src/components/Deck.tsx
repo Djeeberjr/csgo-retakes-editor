@@ -25,7 +25,7 @@ const DeckComp: React.FC<Props> = ({deck,side,title,onChange}) => {
 			<div className="flex">
 				{deck.cardGroups.map((group,index) =>
 					<CardGroupComp 
-						key={group.toString() + index} // FIXME: this is just a "temporary" solution. Implement propper key
+						key={JSON.stringify(group)} // FIXME: this is just a "temporary" solution. Implement propper key
 						cardGroup={group}
 						side={side} 
 						onChange={(newGroup)=>{

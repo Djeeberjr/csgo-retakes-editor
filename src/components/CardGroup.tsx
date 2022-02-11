@@ -22,7 +22,7 @@ const CardGroupComp: React.FC<Props> = ({cardGroup,side,onChange,onRemove}) => {
 			<div className="flex">
 				{cardGroup.cards.map((card,index) => 
 					<CardComp 
-						key={card.toString() + index} // FIXME: this is just a "temporary" solution. Implement propper key
+						key={JSON.stringify(card)} // FIXME: this is just a "temporary" solution. Implement propper key
 						card={card}
 						side={side}
 						onChange={(newCard)=>{
